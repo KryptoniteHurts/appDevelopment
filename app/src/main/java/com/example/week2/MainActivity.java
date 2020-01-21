@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -55,12 +56,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displayToastMsg(View v) {
+        int btnId = v.getId();
+        Log.d("ADebugTag", "Value:" + btnId);
         String msg = "This Button says Up!!!";
         Toast toast = Toast.makeText(this, msg, Toast.LENGTH_LONG);
         toast.show();
     }
 
     public void displayToastMsg2(View v) {
+        int btnId = v.getId();
+        Log.d("ADebugTag", "Value:" + btnId);
         String msg = "This Button says Down!!!";
         Toast toast = Toast.makeText(this, msg, Toast.LENGTH_LONG);
         toast.show();
